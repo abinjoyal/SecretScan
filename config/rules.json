@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "name": "Generic API Key",
+      "pattern": "(?i)(api[_-]?key|apikey|app[_-]?key)\\s*[:=]\\s*[\"']?([A-Za-z0-9_\\-]{8,})[\"']?",
+      "description": "Matches generic API key assignments in code or configuration files."
+    },
+    {
+      "name": "AWS Access Key ID",
+      "pattern": "(?:AKIA|ASIA)[0-9A-Z]{16}",
+      "description": "Matches standard AWS Access Key ID strings."
+    },
+    {
+      "name": "OpenAI API Key",
+      "pattern": "sk-[a-zA-Z0-9]{32,}",
+      "description": "Matches OpenAI API secret key format."
+    },
+    {
+      "name": "GitHub Access Token",
+      "pattern": "gh[pous]_[a-zA-Z0-9]{36}",
+      "description": "Matches GitHub Personal Access Tokens and OAuth tokens."
+    },
+    {
+      "name": "Password Assignment",
+      "pattern": "(?i)(password|pass|passwd|pwd)\\s*[:=]\\s*[\"']?([^\\s\"']{4,})[\"']?",
+      "description": "Matches password variable or key-value assignments."
+    },
+    {
+      "name": "Secret Key",
+      "pattern": "(?i)(secret[_-]?key|client[_-]?secret)\\s*[:=]\\s*[\"']?([A-Za-z0-9_\\-]{8,})[\"']?",
+      "description": "Matches client secret or secret key variable definitions."
+    },
+    {
+      "name": "Access Token",
+      "pattern": "(?i)(access[_-]?token|bearer[_-]?token|auth[_-]?token)\\s*[:=]\\s*[\"']?([A-Za-z0-9_\\-\\.\\=\\/]{8,})[\"']?",
+      "description": "Matches access tokens and authorization bearer tokens."
+    },
+    {
+      "name": "Private Key Header",
+      "pattern": "-----BEGIN\\s+(?:RSA|OPENSSH|EC|DSA|PRIVATE)\\s+KEY-----",
+      "description": "Matches standard PEM/SSH private key file headers."
+    }
+  ]
+}
